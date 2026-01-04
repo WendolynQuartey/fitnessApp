@@ -3,6 +3,8 @@ body, html {
     padding: 0;
     height: 100%;
     box-sizing: border-box;
+    background-color: rgba(237, 251, 251, 1)
+    
 }
 
 *, *::before, *::after{
@@ -10,6 +12,7 @@ body, html {
 }
 
 main {
+
     height: 100%;
 }
 
@@ -19,6 +22,14 @@ main {
     color: white;
     width: 70%;
     margin: 0 15% 0 15%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+#navBar a:hover {
+    background-color: #b32347;
+    width: 20%;
+    text-align: center;
     border: 2px solid transparent;
     border-radius: 5px;
 }
@@ -46,3 +57,10 @@ main {
 /* .card:hover {
     
 } */
+
+
+.dropdown {
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+}
