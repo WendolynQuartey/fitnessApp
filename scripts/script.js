@@ -1,16 +1,18 @@
 let mainMenu = [
-   {text: 'Calorie Calculator', href: '#'},
+   {text: 'Workout Log', href: '#'},
    {text: 'Account', href: '#', drop:[
-      {text: 'Log In', href: '#'},
-      {text: 'Sign Up', href: '#'}, ]},
+      {text: 'Log In', form: 'login'},
+      {text: 'Sign Up', form: 'signup'}, ]},
 ];
 
 let navMenu = document.getElementById("navBar");
-let image = makeElement('img');
 let main = document.querySelector("main");
+let content = docuement.getElementById('mainContent');
 
+let image = makeElement('img');
 image.src = '../images/fitLogo.png';
-main.appendChild(image);
+content.appendChild(image);
+
 main.classList.add('flex-center');
 navMenu.classList.add('flex-center', 'flex-around');
 
@@ -51,10 +53,37 @@ function createDropdown(a, item) {
     let dropItem = makeElement('a');
     dropItem.getAttribute(i.href);
     dropItem.textContent = i.text;
+    dropItem.addEventListener('click', e => {
+      e.preventDefault();
+      showForm(i.form);
+   });
+
     dropDown.appendChild(dropItem);
   }
 
   a.after(dropDown);
+}
+
+function showForm(type){
+   let curr = document.querySelector('.loginForm');
+   if (curr) curr.remove();
+
+   let template = document.getElementById('loginCard');
+   let loginClone = template.content.cloneNode(true);
+
+   let title = loginClone.querySelector('.formTitle');
+   let button = loginClone.querySelector('button');
+
+   if (type === 'login') {
+      title.textContent = 'Log In';
+      button.textContent = 'Log In';
+   } 
+   else if (type === 'signup') {
+      title.textContent = 'Sign Up';
+      button.textContent = 'Create Account';
+   } 
+
+   document.querySelector('main').appendChild(loginClone);
 }
 
 function makeElement(el) {
