@@ -1,9 +1,8 @@
 let mainMenu = [
+   {text: 'Calorie Calculator', href: '#'},
    {text: 'Account', href: '#', drop:[
       {text: 'Log In', href: '#'},
       {text: 'Sign Up', href: '#'}, ]},
-   {text: 'Calorie Calculator', href: '#'},
-   {text: 'Workout Log', href: '#'}, 
 ];
 
 let navMenu = document.getElementById("navBar");
@@ -38,7 +37,7 @@ function openDropdown(event){
 }
 
 
-function createDropdown(a, item){
+function createDropdown(a, item) {
    let current = a.nextElementSibling;
    if(current && current.classList.contains('dropdown')){
       current.remove();

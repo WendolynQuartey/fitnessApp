@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,30 @@
    <link rel="stylesheet" href="./styles/style.css">
    <script defer src="./scripts/script.js"></script>
 </head>
+
 <body>
    <header>
       <nav id="navBar"></nav>
    </header>
    <main>
-      
+      <template id="loginCard">
+         <div class="form">
+            <h2 class="formTitle"></h2>
+
+            <label>
+               Email
+               <input placeholder="Enter Email" type="email" name="email" required />
+            </label>
+
+            <label>
+               Password
+               <input placeholder="Enter Password" type="password" name="password" minlength="8" required />
+            </label>
+
+            <button type="submit">Submit</button>
+         </div>
+      </template>
    </main>
 </body>
+
 </html>
