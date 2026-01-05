@@ -9,8 +9,6 @@ let mainMenu = [
 let navMenu = document.getElementById("navBar");
 let image = makeElement('img');
 let main = document.querySelector("main");
-// let select = makeElement('select');
-
 
 image.src = '../images/fitLogo.png';
 main.appendChild(image);
@@ -22,10 +20,6 @@ for (let i of mainMenu) {
   a.getAttribute(i.href);
   a.textContent = i.text;
 
-  if (item.drop){
-   a.dataset.hasDropdown = 'true';
-   a.dataset.menu = item.text;
-  }
   navMenu.appendChild(a);
 }
 
@@ -34,18 +28,15 @@ navMenu.addEventListener('click', openDropdown);
 function openDropdown(event){
    event.preventDefault();
    if (event.target.tagName !== 'A') return;
+
    for (let i of mainMenu){
-      if(i === 'drop'){
-         createDropdown()
+      if(i.text === event.target.textContent && i.drop){
+         createDropdown(event.target, i.drop);
+         break;
       }
    }
 }
 
-
-function makeElement(el) {
-   let newElement = document.createElement(el);
-   return newElement;
-}
 
 function createDropdown(a, item){
    let current = a.nextElementSibling;
@@ -64,5 +55,10 @@ function createDropdown(a, item){
     dropDown.appendChild(dropItem);
   }
 
-  anchor.after(dropDown);
+  a.after(dropDown);
+}
+
+function makeElement(el) {
+   let newElement = document.createElement(el);
+   return newElement;
 }
