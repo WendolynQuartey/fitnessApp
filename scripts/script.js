@@ -7,7 +7,7 @@ let mainMenu = [
 
 let navMenu = document.getElementById("navBar");
 let main = document.querySelector("main");
-let content = docuement.getElementById('mainContent');
+let content = document.getElementById("mainContent");
 
 let image = makeElement('img');
 image.src = '../images/fitLogo.png';
@@ -67,6 +67,8 @@ function createDropdown(a, item) {
 function showForm(type){
    let curr = document.querySelector('.loginForm');
    if (curr) curr.remove();
+   
+   content.innerHTML='';
 
    let template = document.getElementById('loginCard');
    let loginClone = template.content.cloneNode(true);
