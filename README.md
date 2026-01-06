@@ -18,5 +18,6 @@ Description: An app that allows you to log your workouts and log into to access 
 
 
 ## Resources
+- Font - `Fugaz One` from Google Fonts
 - Icon - Created on Canva.com by me
 - [Web Calculator I used to check if my math was correct](https://www.calculator.net/calorie-calculator.html)

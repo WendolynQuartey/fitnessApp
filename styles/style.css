@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Fugaz+One&display=swap');
+
+
 body,
 html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: "Fugaz One", sans-serif;
     box-sizing: border-box;
     background-color: rgba(237, 251, 251, 1)
 }
@@ -17,20 +21,27 @@ main {
 
     height: 100%;
 }
+
+button {
+    box-shadow: 3px 5px 6px #000000;
+    font-family: "Fugaz One", sans-serif;
+    background-color: azure;
+}
+
 .formTitle{
-   padding-top: 20px;
+   text-align: center;
 }
 
 .card {
     box-shadow: 3px 12px 10px #000000;
     border-radius: 20px;
-    margin: 0 auto;
+    margin: auto;
     width: 500px;
     height: 300px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: #2EC4B6;
 }
