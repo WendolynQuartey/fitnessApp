@@ -43,7 +43,9 @@ function showCalc(event) {
 
    let template = document.getElementById('calorieCard');
    let calcClone = template.content.cloneNode(true);
+   let form = calcClone.querySelector('.calorieForm')
 
+   form.classList.add('card')
    calcClone.querySelector('#calcCals').addEventListener('click', doCalc);
    content.appendChild(calcClone);
 
@@ -145,6 +147,7 @@ function showForm(type) {
 
    let title = loginClone.querySelector('.formTitle');
    let button = loginClone.querySelector('button');
+   let form = loginClone.querySelector('.loginForm');
 
    if (type === 'login') {
       title.textContent = 'Log In';
@@ -154,6 +157,7 @@ function showForm(type) {
       title.textContent = 'Sign Up';
       button.textContent = 'Create Account';
    }
+   form.classList.add('card');
    content.appendChild(loginClone);
 }
 
