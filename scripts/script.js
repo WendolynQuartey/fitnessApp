@@ -25,6 +25,20 @@ for (let i of mainMenu) {
 }
 
 navMenu.addEventListener('click', openDropdown);
+navMenu.addEventListener('click', handleClick);
+
+
+function handleClick(event){
+   event.preventDefault();
+   if (event.target.tagName !== 'A') return;
+   let currentActive = navMenu.querySelector('.active');
+
+   if(currentActive){
+      currentActive.classList.remove('active');
+   }
+  
+  event.target.classList.add('active');
+}
 
 function openDropdown(event){
    event.preventDefault();

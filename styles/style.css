@@ -70,3 +70,11 @@ main {
     border: 2px solid transparent;
     border-radius: 5px;
 }
+
+.active {
+    background-color: #b32347;
+    width: 20%;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}

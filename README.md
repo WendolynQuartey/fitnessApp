@@ -15,6 +15,4 @@ Description: An app that allows you to log your workouts and log into to access 
 
 
 ## Resources
-- Images - 
-- Gifs - 
 - Icons - Created on Canva.com by me
