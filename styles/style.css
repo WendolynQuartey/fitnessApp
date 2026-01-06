@@ -52,14 +52,6 @@ main {
     align-items: center;
 }
 
-.card {
-    box-shadow: 6px 2px 10px #000000;
-    width: 400px;
-    margin: auto;
-    border-radius: 20px;
-    text-align: center;
-    background-color: #2EC4B6;
-}
 
 .dropdown {
     background-color: #2EC4B6;

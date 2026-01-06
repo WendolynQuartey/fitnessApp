@@ -27,6 +27,44 @@
             <button type="submit">Submit</button>
          </div>
       </template>
+
+      <template id="calorieCard">
+         <div class="calorieForm">
+            <h2 class="formTitle"></h2>
+            <label for="age">
+               Age (years):
+               <input type="number" name="age" id="age" min="15" max="80">
+            </label>
+            <label for="gender">
+               Gender:
+               <label for="male">Male</label>
+               <input type="radio" name="gender" id="userMale">
+               <label for="female">Female</label>
+               <input type="radio" name="gender" id="userFemale">
+            </label>
+            <label for="weight">
+               Weight (pounds):
+               <input type="number" name="weight" id="weight" min="15" max="80">
+            </label>
+            <label for="height">
+               Height (feet):
+               <input type="number" name="height" id="feet" placeholder="feet">
+               <input type="number" name="height" id="inches" placeholder="inches">
+            </label>
+            <label for="activity">
+               Activity Level:
+               <select id="activity">
+                  <option value="1.2">Sedentary (little or no execise)</option>
+                  <option value="1.375">Light Active (light exercise/sport 1-3 days/week)</option>
+                  <option value="1.55">Moderately Active (moderate exercise/sport 4-5 days/week)</option>
+                  <option value="7.25">Very Active (intense exercise/sport 6-7 days/week)</option>
+                  <option value="1.9">Extremely Active (very intense exercise/sport & physically demanding job)</option>
+               </select>
+            </label>
+
+            <button type="submit" id="calcCals">Calculate Calories</button>
+         </div>
+      </template>
    <header>
       <nav id="navBar"></nav>
    </header>

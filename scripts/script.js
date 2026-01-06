@@ -98,7 +98,6 @@ function showForm(type){
       title.textContent = 'Sign Up';
       button.textContent = 'Create Account';
    } 
-
    document.querySelector('main').appendChild(loginClone);
 }
 
