@@ -159,23 +159,13 @@ function showForm(type) {
       button.textContent = 'Create Account';
    }
    form.classList.add('card');
-   form.querySelector('#submitForm').addEventListener('click', handleLogin);
+   form.addEventListener('submit', handleLogin);
    content.appendChild(loginClone);
 }
 
 function handleLogin(event){
    event.preventDefault();
-
-   let form = event.target;
-
-   let email = form.querySelector('#userEmail').value.trim();
-   let password = form.querySelector('#userPassword').value.trim();
-
-   if (!email || !password){
-   window.alert('Please fill out all fields!');
-   } else {
-      window.alert("You're In!")
-   }
+   window.alert("You're In!")
 }
 
 function makeElement(el) {
