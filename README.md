@@ -3,18 +3,14 @@ Description: An app that allows you to log your workouts and log into to access 
 
 ## Event Handler Functions
 - `openDropdown(event)` - utilizes `createDropdown` function to open a dropdown menu consisted of `drop` objects inside the `mainMenu` array of objects
-- `showForm(type)` - applies log in form template to Log In and Sign Up objects when clickled
-- `showCalc(event)` - 
-- `doCalc(event)` - stores all the values in the `calorieCard` template and outputs the calories you should be eating to maintain your weight
-
+- `showCalc(event)` - applies `calorieCard` template to `content` div
+- `doCalc(event)` - stores all the values in the `calorieCard` template and outputs the calories you should be eating to maintain your weight when `Calculate Calories` is clicked
 
 
 ## Helper Functions
 - `makeElement(el)` - creates an element
+- `showForm(type)` - applies log in form template to Log In and Sign Up objects when clickled via function expression
 - `createDropdown(a, item)` - adds `drop` objects to a div named dropDown
-
-
-
 
 
 ## Resources

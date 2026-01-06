@@ -124,8 +124,8 @@ function createDropdown(a, item) {
       let dropItem = makeElement('a');
       dropItem.getAttribute(i.href);
       dropItem.textContent = i.text;
-      dropItem.addEventListener('click', e => {
-         e.preventDefault();
+      dropItem.addEventListener('click', event => {
+         event.preventDefault();
          content.innerHTML = '';
          showForm(i.form);
       });
@@ -139,6 +139,7 @@ function createDropdown(a, item) {
 function showForm(type) {
    let curr = document.querySelector('.loginForm');
    if (curr) { curr.remove() };
+
 
    content.innerHTML = '';
 
@@ -158,7 +159,23 @@ function showForm(type) {
       button.textContent = 'Create Account';
    }
    form.classList.add('card');
+   form.querySelector('#submitForm').addEventListener('click', handleLogin);
    content.appendChild(loginClone);
+}
+
+function handleLogin(event){
+   event.preventDefault();
+
+   let form = event.target;
+
+   let email = form.querySelector('#userEmail').value.trim();
+   let password = form.querySelector('#userPassword').value.trim();
+
+   if (!email || !password){
+   window.alert('Please fill out all fields!');
+   } else {
+      window.alert("You're In!")
+   }
 }
 
 function makeElement(el) {
