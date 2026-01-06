@@ -1,5 +1,5 @@
 let mainMenu = [
-   { text: 'Workout Log', href: '#' },
+   // { text: 'Workout Log', href: '#' },
    { text: 'Calorie Calculator', href: '#' },
    {
       text: 'Account', href: '#', drop: [
@@ -34,51 +34,48 @@ navMenu.addEventListener('click', showCalc);
 function showCalc(event) {
    event.preventDefault();
    if (event.target.tagName !== 'A') return;
+   if (event.target.textContent !== 'Calorie Calculator') return;
 
-   for (let i of mainMenu) {
-      if (i.text === 'Calorie Calculator') {
-         let curr = document.querySelector('.calorieForm');
-         if (curr) {curr.remove()};
+   let curr = document.querySelector('.calorieForm');
+   if (curr) { curr.remove() };
 
-         content.innerHTML = '';
+   content.innerHTML = '';
 
-         let template = document.getElementById('calorieCard');
-         let calcClone = template.content.cloneNode(true);
-         
-         calcClone.querySelector('#calcCals').addEventListener('click', doCalc);
-         content.appendChild(calcClone);
-      }
-   }
+   let template = document.getElementById('calorieCard');
+   let calcClone = template.content.cloneNode(true);
+
+   calcClone.querySelector('#calcCals').addEventListener('click', doCalc);
+   content.appendChild(calcClone);
 
 }
 
-function doCalc(event){
+function doCalc(event) {
    event.preventDefault();
    const age = Number(document.getElementById('age').value);
-   const weight =  Number(document.getElementById('weight').value);
-   const feet =  Number(document.getElementById('feet').value);
-   const inches =  Number(document.getElementById('inches').value);
-   const gender =  document.getElementById('gender').value;
-   const activity =  Number(document.getElementById('activity').value);
+   const weight = Number(document.getElementById('weight').value);
+   const feet = Number(document.getElementById('feet').value);
+   const inches = Number(document.getElementById('inches').value);
+   const gender = document.getElementById('gender').value;
+   const activity = Number(document.getElementById('activity').value);
 
-   if(
-      age === '' || isNaN(age) || 
-      weight === '' || isNaN(weight) || 
-      feet === '' || isNaN(feet) || 
-      inches === '' || isNaN(inches) || 
-      isNaN(activity) 
-   ){
-      content.textContent = 'Please fill out all fields';
+   if (
+      age == '' || isNaN(age) ||
+      weight == '' || isNaN(weight) ||
+      feet == '' || isNaN(feet) ||
+      inches == '' || isNaN(inches) ||
+      isNaN(activity)
+   ) {
+      window.alert('Please fill out all fields!');
       return;
    }
 
-   const totalInches = (feet*12) + inches;
+   const totalInches = (feet * 12) + inches;
    let bmr;
 
-   if(gender === "male") {
-      bmr = (10 * (weight * 0.45359237)) + (6.25 * (totalInches * 2.54)) - (5 * age ) + 5;
-   } else if (gender === "female"){
-      bmr =  (10 * (weight * 0.45359237)) + (6.25 * (totalInches * 2.54)) - (5 * age ) - 161;
+   if (gender === "male") {
+      bmr = (10 * (weight * 0.45359237)) + (6.25 * (totalInches * 2.54)) - (5 * age) + 5;
+   } else if (gender === "female") {
+      bmr = (10 * (weight * 0.45359237)) + (6.25 * (totalInches * 2.54)) - (5 * age) - 161;
    }
 
    const tdee = bmr * activity;
@@ -127,6 +124,7 @@ function createDropdown(a, item) {
       dropItem.textContent = i.text;
       dropItem.addEventListener('click', e => {
          e.preventDefault();
+         content.innerHTML = '';
          showForm(i.form);
       });
 
@@ -138,7 +136,7 @@ function createDropdown(a, item) {
 
 function showForm(type) {
    let curr = document.querySelector('.loginForm');
-   if (curr) {curr.remove()};
+   if (curr) { curr.remove() };
 
    content.innerHTML = '';
 
@@ -156,7 +154,7 @@ function showForm(type) {
       title.textContent = 'Sign Up';
       button.textContent = 'Create Account';
    }
-   document.querySelector('main').appendChild(loginClone);
+   content.appendChild(loginClone);
 }
 
 function makeElement(el) {

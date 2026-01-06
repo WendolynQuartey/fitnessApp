@@ -4,6 +4,7 @@ Description: An app that allows you to log your workouts and log into to access 
 ## Event Handler Functions
 - `openDropdown(event)` - utilizes `createDropdown` function to open a dropdown menu consisted of `drop` objects inside the `mainMenu` array of objects
 - `showForm(type)` - applies log in form template to Log In and Sign Up objects when clickled
+- `showCalc(event)` - 
 - `doCalc(event)` - stores all the values in the `calorieCard` template and outputs the calories you should be eating to maintain your weight
 
 
@@ -17,5 +18,5 @@ Description: An app that allows you to log your workouts and log into to access 
 
 
 ## Resources
-- Icons - Created on Canva.com by me
-- [Web Calculator to check if my math was correct](https://www.calculator.net/calorie-calculator.html)
+- Icon - Created on Canva.com by me
+- [Web Calculator I used to check if my math was correct](https://www.calculator.net/calorie-calculator.html)
