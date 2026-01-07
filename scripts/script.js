@@ -172,9 +172,9 @@ function showForm(type) {
       title.textContent = 'Sign Up';
       button.textContent = 'Create Account';
       let firstNameLabel = makeElement('label');
-      let firstNameInput = addElement('input', 'text', 'First Name', true);
+      let firstNameInput = makeInputEl('input', 'text', 'First Name', true);
       let lastNameLabel = makeElement('label');
-      let lastNameInput = addElement('input', 'text', 'Last Name', true);
+      let lastNameInput = makeInputEl('input', 'text', 'Last Name', true);
       firstNameLabel.textContent = 'First Name: ';
      lastNameLabel.textContent = 'Last Name: ';
       firstNameLabel.appendChild(firstNameInput);
@@ -197,7 +197,7 @@ function makeElement(el) {
    return newElement;
 }
 
-function addElement(el, type, content, choice){
+function makeInputEl(el, type, content, choice){
    let newEl = makeElement(el);
    newEl.type = type;
    newEl.placeholder = content;

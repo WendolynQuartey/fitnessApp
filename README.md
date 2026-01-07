@@ -13,6 +13,7 @@ Description: An app that allows you to log your workouts and log into to access 
 - `makeElement(el)` - creates an element
 - `showForm(type)` - applies log in form template to Log In and Sign Up objects when clickled via function expression
 - `createDropdown(a, item)` - adds `drop` objects to a div named dropDown
+- `makeInputEl(el, type, content, choice)` - makes an input element using the `makeElement` helper function
 
 
 ## Resources
