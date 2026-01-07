@@ -2,6 +2,7 @@
 Description: An app that allows you to log your workouts and log into to access previous logs.
 
 ## Event Handler Functions
+- `handleClick(event)` - adds the `active` class to the link that triggered the event if it already exists it removes it
 - `openDropdown(event)` - utilizes `createDropdown` function to open a dropdown menu consisted of `drop` objects inside the `mainMenu` array of objects
 - `showCalc(event)` - applies `calorieCard` template to `content` div
 - `doCalc(event)` - stores all the values in the `calorieCard` template and outputs the calories you should be eating to maintain your weight when `Calculate Calories` is clicked
