@@ -31,8 +31,8 @@ for (let i of mainMenu) {
 }
 
 // Adds 3 event listeners to the same navigation bar
-navMenu.addEventListener('click', openDropdown);
 navMenu.addEventListener('click', handleClick);
+navMenu.addEventListener('click', openDropdown);
 navMenu.addEventListener('click', showCalc);
  
 // Displays the calculator template when Calorie Calculator is clicked
@@ -114,7 +114,7 @@ function openDropdown(event) {
    if (event.target.tagName !== 'A') return;
 
    for (let i of mainMenu) {
-      if (i.text === event.target.textContent && i.drop) {
+      if (i.text === event.target.textContent && i.drop && event.target.classList.contains('active')) {
          createDropdown(event.target, i.drop);
          break;
       }

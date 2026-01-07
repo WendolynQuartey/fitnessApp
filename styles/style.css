@@ -8,7 +8,8 @@ html {
     height: 100%;
     font-family: "Fugaz One", sans-serif;
     box-sizing: border-box;
-    background-color: rgba(237, 251, 251, 1)
+    color: white;
+    background-color: #011627;
 }
 
 *,
@@ -25,7 +26,8 @@ main {
 button {
     box-shadow: 3px 5px 6px #000000;
     font-family: "Fugaz One", sans-serif;
-    background-color: azure;
+    color:white;
+    background-color:  #ff3366;
 }
 
 .formTitle{
@@ -33,7 +35,7 @@ button {
 }
 
 .card {
-    box-shadow: 3px 12px 10px #000000;
+    box-shadow: 3px 12px 18px #f4f2f2;
     border-radius: 20px;
     margin: auto;
     width: 500px;
