@@ -171,6 +171,16 @@ function showForm(type) {
    else if (type === 'signup') {
       title.textContent = 'Sign Up';
       button.textContent = 'Create Account';
+      let firstNameLabel = makeElement('label');
+      let firstNameInput = addElement('input', 'text', 'First Name', true);
+      let lastNameLabel = makeElement('label');
+      let lastNameInput = addElement('input', 'text', 'Last Name', true);
+      firstNameLabel.textContent = 'First Name: ';
+     lastNameLabel.textContent = 'Last Name: ';
+      firstNameLabel.appendChild(firstNameInput);
+      lastNameLabel.appendChild(lastNameInput);
+      form.prepend(lastNameLabel);
+      form.prepend(firstNameLabel);
    }
    form.classList.add('card');
    form.addEventListener('submit', handleLogin);
@@ -185,4 +195,12 @@ function handleLogin(event){
 function makeElement(el) {
    let newElement = document.createElement(el);
    return newElement;
+}
+
+function addElement(el, type, content, choice){
+   let newEl = makeElement(el);
+   newEl.type = type;
+   newEl.placeholder = content;
+   newEl.required = choice;
+   return newEl;
 }
